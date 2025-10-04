@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+
+        <link rel="icon" type="image/icon" href="photo/ico.ico">
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة طعام الشاورما</title>
+    <!-- تحميل Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* خط أساسي يدعم اللغة العربية بشكل جيد */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f5; /* لون خلفية فاتح */
+        }
+        .section-title {
+            /* لون أخضر مشابه للعنوان في الصورة */
+            color: #4a804a; 
+            /* خط زخرفي تحت العنوان باللون الأصفر الذهبي */
+            border-bottom: 3px solid #eab308; 
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+            font-weight: bold;
+        }
+        .price {
+            direction: ltr; /* لضمان ظهور الأرقام والعملة بشكل صحيح */
+            text-align: left;
+            font-weight: 500;
+            color: #333;
+        }
+        .item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dashed #e5e5e5;
+        }
+        /* محاكاة لون الأزرار البني والأصفر */
+     
+    </style>
+</head>
+<!-- تم توسيع الـ padding في الـ body -->
+<body class="p-6 md:p-12 text-right">
+
+    <!-- تم توسيع الحد الأقصى للعرض إلى max-w-screen-2xl -->
+    <div class="max-w-screen-2xl mx-auto bg-white rounded-xl shadow-2xl p-6 md:p-10">
+
+        <!-- الهيكل الرئيسي: 4 أعمدة على الشاشات الكبيرة -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+
+            <!-- العمود الأول: البروستيد والكرسبي -->
+            <div class="space-y-10">
+                
+                <!-- صورة لوجبات البروستيد والكرسبي -->
+                <div class="bg-gray-200 h-60 w-full flex items-center justify-center rounded-xl shadow-xl overflow-hidden">
+                    <!-- استخدام صورة الدجاج المقرمش (2.jpg) هنا -->
+                    <img src="photo\prs.jpg" 
+                        alt="صورة دجاج بروستيد و كرسبي" 
+                        class="w-full h-full object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/500x240/1e40af/ffffff?text=صورة+بروستيد';">
+                </div>
+
+                <!-- قسم البروستيد -->
+                <div>
+                    <h2 class="section-title">البروستيد</h2>
+                    
+                    <!-- قائمة البروستيد -->
+                    <div class="space-y-4 text-sm mt-2">
+                        
+                        <div class="item-row">
+                            <div>
+                                <span class="font-bold">وجبة البروستيد الفردية</span><br>
+                                <span class="text-xs text-gray-500">4 قطع + بطاطا + 1 سلطة كول سلو + مثومة + كاتشاب</span>
+                            </div>
+                            <span class="price font-bold">3.50</span>
+                        </div>
+                        
+                        <div class="item-row">
+                            <div>
+                                <span class="font-bold">وجبة البروستيد العائلية</span><br>
+                                <span class="text-xs text-gray-500">12 قطعة + بطاطا + 1 علبة كبيرة سلطة كول سلو + 4 مثومة صغيرة + كاتشاب + مشروب غازي 1.25 لتر</span>
+                            </div>
+                            <span class="price font-bold">11.00</span>
+                        </div>
+                        
+                        <div class="item-row">
+                            <div>
+                                <span class="font-bold">وجبة البروستيد العملاقة</span><br>
+                                <span class="text-xs text-gray-500">16 قطعة + 1 بطاطا كبير + 4 سلطة كول سلو صغير + 5 مثومة صغير + كاتشاب + 1 بيبسي 2.25 لتر</span>
+                            </div>
+                            <span class="price font-bold">14.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- قسم الكرسبي -->
+                <div class="pt-6">
+                    <h2 class="section-title">الكرسبي</h2>
+
+                    <!-- قائمة الكرسبي -->
+                    <div class="space-y-2 text-sm">
+                        <div class="item-row"><span>ساندويتش دجاج 150 جرام</span><span class="price">1.75</span></div>
+                        <div class="item-row"><span>وجبة ثلاث قطع</span><span class="price">2.25</span></div>
+                        <div class="item-row"><span>خمس قطع كرسبي</span><span class="price">3.00</span></div>
+                        <div class="item-row"><span>عشر قطع كرسبي</span><span class="price">5.60</span></div>
+                        
+                        <p class="text-xs text-gray-500 mt-4 mb-6">مع كل وجبة: بطاطا + قطعة خبز + سلطة كول سلو + مايونيز + كاتشاب</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- العمود الثاني: السناكات (أعلى) ثم شاورما ساندويتش (أسفل) -->
+            <div class="space-y-8">
+                
+                <!-- قسم السناكات (الآن في الأعلى) -->
+                <div>
+                    <h2 class="section-title text-center mx-auto">سناكات</h2>
+
+                    <!-- صورة الساندويتش الرئيسية (التي كانت في الأسفل) تم نقلها لتناسب السناكات/الساندويتشات -->
+                    <div class="bg-gray-200 h-60 w-full flex items-center justify-center rounded-xl shadow-xl overflow-hidden mb-6">
+                        <img src="photo\coll.jpg" 
+                            alt="صورة ساندويتش برجر أو كرسبي" 
+                            class="w-full h-full object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/700x240/000000/ffffff?text=صورة+ساندويتش+جديدة';">
+                    </div>
+
+                    <!-- قائمة السناكات -->
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between font-bold text-gray-700 pb-2 border-b border-gray-300">
+                            <span>الصنف</span>
+                            <span class="price">السعر</span>
+                        </div>
+                        
+                        <div class="item-row"><span>ساندويتش زنجر شراك / فرنسي</span><span class="price">2.00</span></div>
+                        <div class="item-row"><span>ساندويتش زنجر تورتيلا</span><span class="price">1.75</span></div>
+                        <div class="item-row"><span>ساندويتش زنجر بالكريمة</span><span class="price">2.50</span></div>
+                        <div class="item-row"><span>ساندويتش زنجر بالجبنة</span><span class="price">1.75</span></div>
+                        <div class="item-row"><span>ساندويتش فاهيتا دجاج</span><span class="price">2.25</span></div>
+                        <div class="item-row"><span>ساندويتش فاهيتا كريمة</span><span class="price">2.25</span></div>
+                        <div class="item-row"><span>ساندويتش تندوري حار</span><span class="price">1.75</span></div>
+                        <div class="item-row"><span>ساندويتش سنيكر دجاج</span><span class="price">1.75</span></div>
+                        <div class="item-row"><span>ساندويتش برجر لحمة</span><span class="price">2.00</span></div>
+                        <div class="item-row"><span>ساندويتش سكالوب دجاج</span><span class="price">1.75</span></div>
+                        <div class="item-row"><span>ساندويتش دجاج بالليمون والفلفل</span><span class="price">1.50</span></div>
+                        <div class="item-row"><span>ساندويتش سوبر سوبريم</span><span class="price">2.75</span></div>
+                        <div class="item-row"><span>ساندويتش بطاطا شراك / فرنسي</span><span class="price">0.75</span></div>
+                        <div class="item-row"><span>ساندويتش لوكا</span><span class="price">2.00</span></div>
+                        <div class="text-center pt-4">
+                            <button class="order-button">اطلبها وحدها</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- قسم شاورما ساندويتش (عرض جانبي) -->
+                <div class="pt-6">
+                    <h2 class="section-title text-center mx-auto mb-6">شاورما ساندويتش</h2>
+
+                    <!-- حاوية Grid لترتيب الصورة والقائمة جنباً إلى جنب -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                        
+                        <!-- 1. قائمة الشاورما ساندويتش (على اليمين) -->
+                        <div class="space-y-2 text-sm order-first">
+                            <div class="flex justify-between font-bold text-gray-700 pb-2 border-b border-gray-300">
+                                <span>الصنف</span>
+                                <span class="price">السعر</span>
+                            </div>
+
+                            <div class="item-row"><span>ساندويتش شاورما عادي</span><span class="price">0.75</span></div>
+                            <div class="item-row"><span>ساندويتش شاورما سوبر</span><span class="price">1.25</span></div>
+                            <div class="item-row"><span>ساندويتش شاورما تورتيلا</span><span class="price">1.25</span></div>
+                            <div class="item-row"><span>ساندويتش شاورما إيطالي</span><span class="price">2.00</span></div>
+                            <div class="item-row"><span>ساندويتش شاورما فاهيتا</span><span class="price">2.50</span></div>
+                            <div class="item-row"><span>ساندويتش شاورما عرسي</span><span class="price">1.50</span></div>
+                            <div class="item-row"><span>ساندويتش شاورما كرنشي</span><span class="price">1.75</span></div>
+                            <div class="item-row"><span>ساندويتش شاورما إيطالي كريمة وفطر</span><span class="price">2.50</span></div>
+                            <div class="item-row"><span>ساندويتش شاورما فرنسي كريمة وفطر</span><span class="price">3.00</span></div>
+
+
+                            <div class="text-center pt-4">
+                                <button class="order-button">اطلبها بمرونة</button>
+                            </div>
+                        </div>
+
+                        <!-- 2. الصورة (على الشمال/اليسار) -->
+                        <div 
+                        class="bg-gray-200 h-60 w-full flex items-center justify-center rounded-xl shadow-xl overflow-hidden md:order-last"
+                        style="width: 500px; height: auto;"
+                        >
+                            <img src="photo/tt.jpg" 
+                            
+                                alt="صورة ساندويتش شاورما" 
+                                class="w-full h-full object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/700x240/000000/ffffff?text=صورة+ساندويتش+جديدة';">
+                        </div>
+                    </div>
+                    <!-- نهاية حاوية Grid -->
+                </div>
+            </div>
+
+ 
+
+            <!-- العمود الثالث: الشاورما والوجبات -->
+            <div class="space-y-8">
+                
+                <!-- قسم الشاورما (وجبات عادية) -->
+                <div>
+                    <h2 class="section-title">شاورما</h2>
+
+                    <!-- قائمة الشاورما -->
+                    <div class="space-y-2 text-sm">
+                        <div class="item-row"><span>وجبة شاورما عادي</span><span class="price">2.00</span></div>
+                        <div class="item-row"><span>وجبة سوبر</span><span class="price">2.65</span></div>
+                        <div class="item-row"><span>وجبة شاورما دبل</span><span class="price">3.25</span></div>
+                        <div class="item-row"><span>وجبة شاورما تورتيلا</span><span class="price">4.50</span></div>
+                        <div class="item-row"><span>وجبة شاورما إيطالي كريمة وفطر</span><span class="price">3.00</span></div>
+                        <div class="item-row"><span>وجبة شاورما فاهيتا كريمة وفطر</span><span class="price">3.90</span></div>
+                        <div class="item-row"><span>وجبة شاورما كرنشي</span><span class="price">3.50</span></div>
+                        <div class="item-row"><span>وجبة شاورما عرسي</span><span class="price">2.50</span></div>
+                        <div class="item-row"><span>وجبة شاورما كريمة</span><span class="price">3.00</span></div>
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-4 mb-6">مع كل وجبة: بطاطا (150غرام)، مايونيز، (كاتشاب + مخلل)</p>
+                </div>
+                
+                <!-- صورة الوجبة الجانبية (انتقلت لتصبح هنا) -->
+                <div class="h-60 flex items-center justify-center rounded-xl shadow-xl overflow-hidden">
+                    <!-- استخدام صورة الوجبة المقطعة (00.jpg) هنا -->
+                    <img src="photo\brg.png" 
+                        alt="صورة وجبة شاورما مقطعة" 
+                        class="w-full h-full object-cover rounded-xl"
+                        onerror="this.onerror=null; this.src='https://placehold.co/500x240/1e40af/ffffff?text=صورة+وجبة+شاورما';">
+                </div>
+                
+                <!-- قسم الوجبات الكبيرة (للعائلة) -->
+                <div class="pt-6">
+                    <h2 class="section-title">الوجبات العائلية</h2>
+                    <div class="space-y-2 text-sm">
+                        <div class="item-row"><span>وجبة شاورما عائلية شراك</span><span class="price">9.50</span></div>
+                        <div class="item-row"><span>وجبة شاورما عائلية تورتيلا</span><span class="price">10.00</span></div>
+                        <div class="item-row"><span>وجبة شاورما عملاقة شراك</span><span class="price">15.00</span></div>
+                        <div class="item-row"><span>وجبة شاورما عملاقة موزاريلا</span><span class="price">17.00</span></div>
+                        <div class="item-row"><span>وجبة شاورما مكس</span><span class="price">10.00</span></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- العمود الرابع (الأخير): المقبلات والمشروبات -->
+            <div class="space-y-10">
+                
+                <!-- قسم المقبلات -->
+                <div>
+                    <h2 class="section-title">مقبلات</h2>
+                    <p class="text-sm text-gray-500 mb-4">تغميسات: حمص، متبل، ثوم، حار، كاتشب، مخلل، مايونيز، كوكتيل،...إلخ</p>
+
+                    <!-- صورة الصوصات/المقبلات (انتقلت لتصبح هنا) -->
+                    <div class="mt-4 h-60 flex items-center justify-center rounded-xl shadow-xl overflow-hidden">
+                         <img src="photo/mkll.jpg" 
+                            alt="صورة صوصات ومقبلات" 
+                            class="w-full h-full object-cover rounded-xl shadow-md"
+                            onerror="this.onerror=null; this.src='https://placehold.co/500x240/9c704e/ffffff?text=صورة+صوصات+ومقبلات';">
+                    </div>
+                    
+                    <div class="flex justify-between font-bold text-gray-700 pb-2 border-b border-gray-300 mt-6">
+                        <span>الصنف</span>
+                        <span class="price">السعر</span>
+                    </div>
+
+                    <!-- قائمة المقبلات -->
+                    <div class="space-y-2 text-sm mt-2">
+                        <div class="item-row"><span>كاتشاب</span><span class="price">0.20</span></div>
+                        <div class="item-row"><span>علبة مخلل صغير</span><span class="price">0.25</span></div>
+                        <div class="item-row"><span>علبة مخلل كبير</span><span class="price">0.75</span></div>
+                        <div class="item-row"><span>سلطة كولسلو صغير</span><span class="price">0.75</span></div>
+                        <div class="item-row"><span>صحن بطاطا صغير</span><span class="price">1.50</span></div>
+                        <div class="item-row"><span>صحن بطاطا كبير</span><span class="price">2.25</span></div>
+                        <div class="item-row"><span>أصابع موزاريلا</span><span class="price">2.25</span></div>
+                        <div class="item-row"><span>بطاطا ويدجز</span><span class="price">2.25</span></div>
+                    </div>
+                </div>
+
+                <!-- قسم المشروبات -->
+                <div class="pt-6">
+                    <h2 class="section-title">مشروبات</h2>
+
+                    <!-- قائمة المشروبات -->
+                    <div class="space-y-2 text-sm">
+                        <div class="item-row"><span>مشروبات غازية 250 مل</span><span class="price">0.30</span></div>
+                        <div class="item-row"><span>عصير مراعي 200 مل</span><span class="price">0.25</span></div>
+                        <div class="item-row"><span>شاي</span><span class="price">0.50</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
